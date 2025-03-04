@@ -1,0 +1,22 @@
+// _mixins.scss
+@mixin button($bg-color) {
+    background-color: $bg-color;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin transition($property, $duration, $timing-function) {
+    -webkit-transition: $property $duration $timing-function;
+    -moz-transition: $property $duration $timing-function;
+    -ms-transition: $property $duration $timing-function;
+    -o-transition: $property $duration $timing-function;
+    transition: $property $duration $timing-function;
+}

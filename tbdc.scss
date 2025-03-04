@@ -1,0 +1,48 @@
+// import bootstrap
+@import "scss/custom";
+// import mixins
+@import "scss/mixins";
+
+
+.button {
+    @include transition(background-color, 0.3s, ease-in-out);
+}
+.button {
+    background-color: darken($primary, 10%);
+  }
+.button:hover {
+    background-color: #3D9970;
+
+}
+
+
+.box { 
+    @include border-radius(10px);
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+}
+
+@for $i from 1 through 5 {
+    .box-#{$i} {
+        width: 20px * $i;
+        height: 20px * $i;
+        background-color: royalblue;
+    }
+}
+
+$colors: red, green, blue;
+
+@each $color in $colors {
+    .text-#{$color} {
+        color: $color;
+    }
+}
+
+body {
+    font-family: nth($font-stack, 1);
+}
+
+
+
+
